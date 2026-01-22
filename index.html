@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>KETERS PRO | הבית של הטניס</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700;900&family=Rubik:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        neon: '#ccff00', // Tennis Ball Green
+                        dark: '#050505',
+                        card: '#121212',
+                        gray: { 850: '#1a1a1a' }
+                    },
+                    fontFamily: { sans: ['Heebo', 'sans-serif'], heading: ['Rubik', 'sans-serif'] },
+                    backgroundImage: {
+                        'hero-pattern': "url('https://images.unsplash.com/photo-1530915512336-368958742c8c?q=80&w=2070&auto=format&fit=crop')",
+                        'noise': "url('data:image/svg+xml,%3Csvg viewBox=%220 0 200 200%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22noiseFilter%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.65%22 numOctaves=%223%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23noiseFilter)%22 opacity=%220.05%22/%3E%3C/svg%3E')",
+                    },
+                    animation: {
+                        'marquee': 'marquee 30s linear infinite',
+                        'pulse-glow': 'pulse-glow 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                    },
+                    keyframes: {
+                        marquee: { '0%': { transform: 'translateX(0%)' }, '100%': { transform: 'translateX(100%)' } },
+                        'pulse-glow': { '0%, 100%': { opacity: '1', boxShadow: '0 0 20px #ccff00' }, '50%': { opacity: '.8', boxShadow: '0 0 5px #ccff00' } }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body { background-color: #050505; color: #fff; }
+        .text-outline { -webkit-text-stroke: 1px rgba(255,255,255,0.2); color: transparent; }
+        .glass-dark { background: rgba(20, 20, 20, 0.6); backdrop-filter: blur(12px); border: 1px solid rgba(255,255,255,0.08); }
+        
+        /* גלילה מותאמת */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #050505; }
+        ::-webkit-scrollbar-thumb { background: #333; border-radius: 4px; }
+    </style>
+</head>
+<body class="antialiased font-sans selection:bg-neon selection:text-black">
+
+    <nav class="fixed w-full z-50 top-0 left-0 border-b border-white/5 bg-black/80 backdrop-blur-md">
+        <div class="max-w-[1600px] mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="https://keters-shop.web.app/?category=tenis" class="text-2xl font-heading font-black tracking-tighter flex items-center gap-2">
+                KETERS<span class="text-neon text-4xl">.</span>
+            </a>
+            <a href="https://keters-shop.web.app/?category=tenis" class="hidden md:flex items-center gap-2 text-sm font-bold text-gray-400 hover:text-white transition">
+                לקטלוג המלא <i class="fa-solid fa-arrow-left"></i>
+            </a>
+        </div>
+    </nav>
+
+    <header class="relative min-h-[90vh] flex items-center justify-center overflow-hidden pt-20">
+        <div class="absolute inset-0 bg-hero-pattern bg-cover bg-center bg-fixed opacity-40"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/80 to-transparent"></div>
+        <div class="absolute inset-0 bg-noise opacity-30 mix-blend-overlay"></div>
+
+        <div class="relative z-10 text-center px-4 max-w-5xl mx-auto">
+            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-neon/30 bg-neon/10 text-neon text-xs font-bold uppercase tracking-widest mb-6 backdrop-blur-sm">
+                <span class="w-2 h-2 rounded-full bg-neon animate-pulse"></span>
+                קולקציית טניס רשמית 2026
+            </div>
+            
+            <h1 class="text-5xl md:text-8xl lg:text-9xl font-heading font-black leading-[0.9] tracking-tight mb-8">
+                לשלוט <br>
+                <span class="text-transparent bg-clip-text bg-gradient-to-br from-white to-gray-500">במגרש</span>
+            </h1>
+
+            <p class="text-gray-400 text-lg md:text-xl max-w-2xl mx-auto mb-10 font-light leading-relaxed">
+                הציוד שבחרנו עבורך הוא היתרון הלא הוגן שלך על היריב. 
+                מחבטים מהונדסים, נעליים יציבות ומחירים שמשאירים מקום לעוד אימון.
+            </p>
+
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="https://keters-shop.web.app/?category=tenis" class="group relative px-10 py-4 bg-neon text-black font-black text-lg rounded-full hover:bg-white transition-all duration-300 shadow-[0_0_20px_rgba(204,255,0,0.4)]">
+                    הזמן ציוד עכשיו
+                </a>
+                <a href="#reviews" class="px-8 py-4 text-white font-bold text-lg hover:text-neon transition flex items-center gap-3">
+                    <i class="fa-solid fa-star text-neon"></i>
+                    מה אומרים המקצוענים?
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <div class="w-full bg-neon text-black py-3 overflow-hidden border-y border-black rotate-[-1deg] scale-105 z-20 relative shadow-[0_0_30px_rgba(204,255,0,0.3)]">
+        <div class="flex whitespace-nowrap animate-marquee font-black text-xl uppercase tracking-widest">
+            <span class="mx-4">⚡ משלוח מהיר</span> • <span class="mx-4">ציוד מקורי</span> • <span class="mx-4">מחירים שוברי שוק</span> • <span class="mx-4">WILSON</span> • <span class="mx-4">BABOLAT</span> • <span class="mx-4">NIKE</span> •
+            <span class="mx-4">⚡ משלוח מהיר</span> • <span class="mx-4">ציוד מקורי</span> • <span class="mx-4">מחירים שוברי שוק</span> • <span class="mx-4">WILSON</span> • <span class="mx-4">BABOLAT</span> • <span class="mx-4">NIKE</span> •
+        </div>
+    </div>
+
+    <section id="collection" class="py-24 max-w-[1600px] mx-auto px-4 md:px-6">
+        <div class="flex items-end justify-between mb-12">
+            <h2 class="text-4xl md:text-5xl font-heading font-black text-white">הקטגוריות <span class="text-neon">החמות</span></h2>
+            <a href="https://keters-shop.web.app/?category=tenis" class="hidden md:block text-gray-400 hover:text-white underline decoration-neon underline-offset-4">לכל הקטלוג</a>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-4 grid-rows-2 gap-4 h-auto md:h-[600px]">
+            
+            <a href="https://keters-shop.web.app/?category=tenis" class="md:col-span-2 md:row-span-2 relative group overflow-hidden rounded-[2rem] bg-gray-850 border border-white/5">
+                <img src="https://images.unsplash.com/photo-1622279457486-62dcc4a431d6?q=80&w=1000" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-105 transition duration-700 ease-out">
+                <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
+                <div class="absolute bottom-0 p-8 w-full">
+                    <div class="text-neon font-bold text-sm mb-2 uppercase tracking-wider">TOP PERFORMANCE</div>
+                    <h3 class="text-3xl font-black mb-2">מחבטי פרימיום</h3>
+                    <p class="text-gray-400 text-sm mb-4 line-clamp-2">הדגמים החדשים של Wilson ו-Babolat. שליטה, עוצמה ודיוק שלא הכרתם.</p>
+                    <span class="inline-flex items-center justify-center w-12 h-12 bg-white text-black rounded-full group-hover:bg-neon transition"><i class="fa-solid fa-arrow-left"></i></span>
+                </div>
+            </a>
+
+            <a href="https://keters-shop.web.app/?category=tenis" class="md:col-span-2 relative group overflow-hidden rounded-[2rem] bg-gray-850 border border-white/5">
+                <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?q=80&w=1000" class="absolute inset-0 w-full h-full object-cover opacity-70 group-hover:scale-105 transition duration-700 object-center">
+                <div class="absolute inset-0 bg-gradient-to-r from-black via-transparent to-transparent"></div>
+                <div class="absolute bottom-0 right-0 p-8 text-right w-full">
+                    <h3 class="text-2xl font-black mb-1 text-white">הנעלה מקצועית</h3>
+                    <p class="text-gray-300 text-sm">יציבות מקסימלית לכל משטח</p>
+                </div>
+            </a>
+
+            <a href="https://keters-shop.web.app/?category=tenis" class="relative group overflow-hidden rounded-[2rem] bg-gray-850 border border-white/5">
+                <img src="https://images.unsplash.com/photo-1612396924828-98f5a600d892?q=80&w=800" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-105 transition duration-700">
+                <div class="absolute inset-0 flex items-center justify-center bg-black/30 group-hover:bg-black/10 transition">
+                    <h3 class="text-2xl font-black border-b-2 border-neon pb-1">תיקים וציוד</h3>
+                </div>
+            </a>
+
+            <a href="https://keters-shop.web.app/?category=tenis" class="relative group overflow-hidden rounded-[2rem] bg-neon text-black border border-white/5">
+                <div class="absolute top-4 left-4 text-3xl opacity-20 rotate-12"><i class="fa-solid fa-baseball"></i></div>
+                <div class="h-full flex flex-col justify-between p-6">
+                    <h3 class="text-2xl font-black leading-none">אביזרים <br>משלימים</h3>
+                    <div>
+                        <p class="font-bold text-sm mb-2 opacity-80">גריפים, כדורים וגידים</p>
+                        <span class="text-sm font-bold underline">לרכישה מהירה</span>
+                    </div>
+                </div>
+            </a>
+
+        </div>
+    </section>
+
+    <section id="reviews" class="py-20 relative bg-[#0a0a0a]">
+        <div class="max-w-6xl mx-auto px-4 relative z-10">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-5xl font-heading font-black mb-4">אל תקשיבו רק לנו</h2>
+                <p class="text-gray-400">הצטרפו לקהילה של מנצחים שבחרו ב-Keters</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="glass-dark p-8 rounded-2xl border-t-4 border-transparent hover:border-neon transition group">
+                    <div class="flex gap-1 text-neon mb-4 text-xs"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                    <p class="text-gray-300 mb-6">"פחדתי להזמין מחבט מחו"ל, אבל ב-Keters הגיע מחבט מקורי של ווילסון באריזה סגורה. חסכתי מאות שקלים."</p>
+                    <div class="font-bold text-sm text-white">- רועי מנור, שחקן ליגה</div>
+                </div>
+
+                <div class="glass-dark p-8 rounded-2xl border-t-4 border-transparent hover:border-neon transition group">
+                    <div class="flex gap-1 text-neon mb-4 text-xs"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                    <p class="text-gray-300 mb-6">"חיפשתי נעליים ספציפיות שלא היו במידה שלי בארץ. כאן מצאתי אותן תוך דקה והמשלוח היה מפתיע לטובה."</p>
+                    <div class="font-bold text-sm text-white">- דנה פרידמן, מאמנת</div>
+                </div>
+
+                <div class="glass-dark p-8 rounded-2xl border-t-4 border-transparent hover:border-neon transition group">
+                    <div class="flex gap-1 text-neon mb-4 text-xs"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                    <p class="text-gray-300 mb-6">"האתר הכי טוב לציוד טניס. אני מזמין קבוע גריפים וכדורים, האיכות תמיד 10 מתוך 10."</p>
+                    <div class="font-bold text-sm text-white">- אלון גל, חובב מושבע</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="relative py-32 flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 bg-neon opacity-5"></div>
+        <div class="relative z-10 text-center px-4">
+            <h2 class="text-5xl md:text-7xl font-black mb-6 text-outline md:text-white">מוכנים למשחק?</h2>
+            <p class="text-gray-400 mb-10 max-w-lg mx-auto">המלאי מתעדכן כל יום, והמוצרים הטובים נחטפים מהר.</p>
+            
+            <a href="https://keters-shop.web.app/?category=tenis" class="inline-flex items-center justify-center px-12 py-5 bg-white text-black text-xl font-black rounded-full hover:bg-neon hover:scale-105 transition-all duration-300 shadow-lg">
+                כניסה לחנות <i class="fa-solid fa-arrow-left mr-3"></i>
+            </a>
+        </div>
+    </section>
+
+    <footer class="border-t border-white/10 bg-black py-12 text-center text-gray-600 text-sm">
+        <p>© 2026 Keters Pro. Affiliated with global suppliers.</p>
+    </footer>
+
+</body>
+</html>
